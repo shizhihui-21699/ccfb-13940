@@ -1,0 +1,19 @@
+[package]
+name = "attack-harness"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Adversarial race/escape test harness for safefs"
+
+[dependencies]
+safefs = { path = "../safefs" }
+libc = "0.2"
+
+[[bin]]
+name = "harness"
+path = "src/bin/harness.rs"
+
+[[bin]]
+name = "bench"
+path = "src/bin/bench.rs"
